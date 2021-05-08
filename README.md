@@ -6,3 +6,5 @@
 |Freemarker|
 |Thymeleaf|
 |Mustanche|
+
+### JSP의 경우, WAR 배포만 지원하므로 제외
