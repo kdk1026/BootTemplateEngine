@@ -9,13 +9,15 @@
 
 ### JSP의 경우, WAR 배포만 지원하므로 제외
 * pom.xml
-    <!-- JSP -->
-<dependency>
-	<groupId>org.apache.tomcat.embed</groupId>
-	<artifactId>tomcat-embed-jasper</artifactId>
-	<scope>provided</scope>
-</dependency>
-<dependency>
-	<groupId>javax.servlet</groupId>
-	<artifactId>jstl</artifactId>
-</dependency>
+	<!-- JSP -->
+	<dependency>
+		<groupId>org.apache.tomcat.embed</groupId>
+		<artifactId>tomcat-embed-jasper</artifactId>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+	</dependency>
+	
+* application.properties
