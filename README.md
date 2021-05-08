@@ -9,6 +9,8 @@
 
 ### JSP의 경우, WAR 배포만 지원하므로 제외
 * pom.xml
+<pre>
+  <code>
 	<!-- JSP -->
 	<dependency>
 		<groupId>org.apache.tomcat.embed</groupId>
@@ -19,5 +21,7 @@
 		<groupId>javax.servlet</groupId>
 		<artifactId>jstl</artifactId>
 	</dependency>
+  </code>
+</pre>
 	
 * application.properties
