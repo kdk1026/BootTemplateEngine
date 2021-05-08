@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul>
+		<li>특징</li>
+		<ul>
+			<li>Spring 재단에서 밀어줌</li>
+			<li>XML 기반이라 태그를 닫지 않으면 오류 발생</li>
+			<li>서버 없이 HTML 구동 시, 퍼블 노출</li>
+			<li>decorator 기반의 layout 지원 (html 에 추가적으로 명시해주어야 함)</li>
+			<li>전반적으로 문법이 어려움</li>
+		</ul>
+	</ul>
+	
+	<div class="output">
+		<ul>
+			<li>출력</li>
+			<span th:text="${msg}">기본 메시지</span>
+		</ul>		
+	</div>
+	
+	<div class="loop">
+		<ul>
+			<li>리스트 Loop</li>
+			<div th:each="item : ${list}">
+				<p>
+					id : <span th:text="${item.id}">0</span><br/>
+					name : <span th:text="${item.name}">아무개</span><br/>
+				</p>
+			</div>
+		</ul>
+	</div>
+	
+	<div class="include">
+		<ul>
+			<li>include</li>
+			<div th:replace="/thymeleaf/fragments/header"></div>
+			
+			헤더와 푸터는 Include 했어요~
+			
+			<div th:replace="/thymeleaf/fragments/footer"></div>
+		</ul>
+	</div>
+	
+	<div class="if else">
+		<ul>
+			<li>if else</li>
+			<span th:if="${#lists.isEmpty(emptyList)}">True인 경우</span>
+			<span th:if="${not #lists.isEmpty(emptyList)}">False인 경우</span>
+			<span th:unless="${#lists.isEmpty(emptyList)}">False인 경우</span>
+		</ul>
+	</div>
+
+</body>
+</html>
