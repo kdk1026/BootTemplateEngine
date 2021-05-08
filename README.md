@@ -20,8 +20,6 @@
 	<groupId>javax.servlet</groupId>
 	<artifactId>jstl</artifactId>
 </dependency>
-...
-<packaging>war</packaging>
 ```
 	
 * application.properties
